@@ -1,0 +1,35 @@
+#DEFAULT
+system:
+  build:
+    version: "local"
+
+spring:
+  profiles:
+    active: "dev"
+  data:
+    rest:
+      base-path: api/crud
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+  datasource:
+    url: jdbc:h2:mem:onlineshop?useUnicode=yes&characterEncoding=UTF8
+    initialization-mode: always
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+    sql-script-encoding: UTF-8
+  h2:
+    console:
+      enabled: true
+
+
+
+logging:
+  level:
+    de.pom: debug
+    org:
+      springframework.web: warn
+      hibernate:
+        SQL: info
