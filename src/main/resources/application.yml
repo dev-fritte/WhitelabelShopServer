@@ -28,7 +28,7 @@ spring:
 
 logging:
   level:
-    de.pom: debug
+    de.dev_fritte: debug
     org:
       springframework.web: warn
       hibernate:
